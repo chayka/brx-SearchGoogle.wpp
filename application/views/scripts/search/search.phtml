@@ -1,0 +1,26 @@
+<div class="brx-searchgoogle">
+<script>
+  (function() {
+    var cx = '<?php echo $this->seID;?>';//'001898166803650811300:3mydba0aoug';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<?php if(OptionHelper_brx_SearchGoogle::getOption('show_input')):?>
+    <div class="brx-searchgoogle-input_box">
+        <gcse:searchbox></gcse:searchbox>
+    </div>
+    <div class="brx-searchgoogle-results_box">
+        <gcse:searchresults></gcse:searchresults>
+    </div>
+<?php else:?>
+    <div class="brx-searchgoogle-results_box">
+        <gcse:searchresults-only></gcse:searchresults-only>
+    </div>
+<?php endif;?>
+</div>
