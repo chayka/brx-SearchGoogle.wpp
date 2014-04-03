@@ -2,7 +2,7 @@
 /*
   Plugin Name: brx-SearchGoogle
   Plugin URI: http://github.com/chayka/brx-SearchGoogle.git
-  Description: Empty plugin.
+  Description: Search by google custom search.
   Version: 1.0
   Author: Boris Mossounov
   Author URI: http://facebook.com/mossounov
@@ -56,11 +56,11 @@ class brx_SearchGoogle extends WpPlugin{
 
     public function registerMetaBoxes() {
         
-        $this->addMetaBox('seo_params',
-            NlsHelper::_( 'SEO Params'),
-            '/metabox/seo-params',
-            'normal',
-            'high');
+//        $this->addMetaBox('seo_params',
+//            NlsHelper::_( 'SEO Params'),
+//            '/metabox/seo-params',
+//            'normal',
+//            'high');
     }
     
     public function registerResources($minimize = false){
